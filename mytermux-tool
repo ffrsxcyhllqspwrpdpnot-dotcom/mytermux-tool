@@ -1,0 +1,45 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
+import os
+
+def clear():
+    os.system("clear")
+
+def main():
+    while True:
+        clear()
+
+        print("╔══════════════════════════════════╗")
+        print("║        🛠️  TERMUX TOOL          ║")
+        print("╠══════════════════════════════════╣")
+        print("║ 1. 📂 إدارة الملفات             ║")
+        print("║ 2. 📱 معلومات الجهاز            ║")
+        print("║ 0. 🚪 خروج                      ║")
+        print("╚══════════════════════════════════╝")
+
+        choice = input("\nاختر: ").strip()
+
+        if choice == "1":
+            clear()
+            print("📂 محتويات المجلد الحالي:")
+            os.system("ls -lah")
+
+        elif choice == "2":
+            clear()
+            print("📱 معلومات الجهاز:")
+            os.system("uname -a")
+
+        elif choice == "0":
+            clear()
+            print("👋 تم الخروج.")
+            break
+
+        else:
+            print("❌ اختيار غير صحيح.")
+
+        input("\nاضغط Enter للمتابعة...")
+
+
+if __name__ == "__main__":
+    main()
